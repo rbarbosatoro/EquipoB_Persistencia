@@ -1,4 +1,4 @@
-package modelo.entidad;
+package ejemplo.modelo.entidad;
 
 import java.util.ArrayList;
 import java.util.Collection;

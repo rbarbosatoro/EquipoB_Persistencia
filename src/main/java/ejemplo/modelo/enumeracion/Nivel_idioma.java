@@ -1,4 +1,4 @@
-package modelo.enumeracion;
+package ejemplo.modelo.enumeracion;
 
 	public enum Nivel_idioma {
 

@@ -1,9 +1,9 @@
-package modelo.repositorio;
+package ejemplo.modelo.repositorio;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import modelo.entidad.Experiencia;
+import ejemplo.modelo.entidad.Experiencia;
 
 @Repository
 public interface RepositorioExperiencia extends JpaRepository<Experiencia, Long> {

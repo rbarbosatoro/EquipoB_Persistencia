@@ -1,4 +1,4 @@
-package modelo.entidad;
+package ejemplo.modelo.entidad;
 
 import java.sql.Date;
 import java.util.HashSet;
