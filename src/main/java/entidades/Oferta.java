@@ -27,9 +27,11 @@ public class Oferta {
     @ManyToMany
     private Empresa empresa;
     
-    @ManyToOne
-    private Test test;
+    //@ManyToOne
+    //private Test test;
     //Estos dos de arriba serian para: ID_EMPRESA y ID_TEST
+   
+    
     
     @NotNull
     @NotEmpty
