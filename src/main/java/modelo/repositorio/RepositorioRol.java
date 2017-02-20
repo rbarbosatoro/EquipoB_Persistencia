@@ -1,12 +1,13 @@
-package repositorios;
+package modelo.repositorio;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import entidades.Empresa;
+import modelo.entidad.Rol;
+
 
 
 @Repository
-public interface RepositorioEmpresa extends JpaRepository<Empresa, Long>{
+public interface RepositorioRol extends JpaRepository<Rol, Long> {
 
 }

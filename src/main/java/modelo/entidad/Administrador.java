@@ -1,18 +1,21 @@
-package entidades;
+package modelo.entidad;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-public class Idioma {
-	
+public class Administrador extends Usuario{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5288490418601627872L;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
@@ -21,39 +24,16 @@ public class Idioma {
 	@NotEmpty
 	private String nombre;
 	
-	@OneToMany(fetch = FetchType.EAGER)
-	private Idioma_CV idiomacv;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public Idioma_CV getIdiomacv() {
-		return idiomacv;
-	}
-
-	public void setIdiomacv(Idioma_CV idiomacv) {
-		this.idiomacv = idiomacv;
-	}
+	@NotNull
+	@NotEmpty
+	private String apellidos;
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
-		int result = 1;
+		int result = super.hashCode();
+		result = prime * result + ((apellidos == null) ? 0 : apellidos.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((idiomacv == null) ? 0 : idiomacv.hashCode());
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
 		return result;
 	}
@@ -62,20 +42,20 @@ public class Idioma {
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
+		if (!super.equals(obj))
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Idioma other = (Idioma) obj;
+		Administrador other = (Administrador) obj;
+		if (apellidos == null) {
+			if (other.apellidos != null)
+				return false;
+		} else if (!apellidos.equals(other.apellidos))
+			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
-			return false;
-		if (idiomacv == null) {
-			if (other.idiomacv != null)
-				return false;
-		} else if (!idiomacv.equals(other.idiomacv))
 			return false;
 		if (nombre == null) {
 			if (other.nombre != null)

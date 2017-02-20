@@ -1,10 +1,10 @@
-package repositorios;
+package modelo.repositorio;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Repository;
 
-import entidades.Usuario;
+import modelo.entidad.Usuario;
 
 @Repository
 public interface RepositorioUsuario extends JpaRepository<Usuario, Long>{

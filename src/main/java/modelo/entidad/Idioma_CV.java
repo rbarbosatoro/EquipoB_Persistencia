@@ -1,4 +1,4 @@
-package entidades;
+package modelo.entidad;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
