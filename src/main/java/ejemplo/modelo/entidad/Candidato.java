@@ -6,11 +6,7 @@ import java.util.Set;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -163,17 +159,26 @@ public class Candidato extends Usuario{
 		this.curriculum = curriculum;
 	}
 
-
 	public Candidato() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
 		result = prime * result + ((apellidos == null) ? 0 : apellidos.hashCode());
+		result = prime * result + ((curriculum == null) ? 0 : curriculum.hashCode());
+		result = prime * result + ((direccion == null) ? 0 : direccion.hashCode());
+		result = prime * result + ((fecha_nac == null) ? 0 : fecha_nac.hashCode());
+		result = prime * result + fijo;
+		result = prime * result + ((genero == null) ? 0 : genero.hashCode());
+		result = prime * result + ((imagen == null) ? 0 : imagen.hashCode());
+		result = prime * result + movil;
+		result = prime * result + movil2;
+		result = prime * result + ((nif == null) ? 0 : nif.hashCode());
+		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
 		result = prime * result + ((provincia == null) ? 0 : provincia.hashCode());
 		return result;
 	}
@@ -241,6 +246,7 @@ public class Candidato extends Usuario{
 		return true;
 	}
 
+
 	public Candidato(Long id, String email, String password, Set<Rol> roles ,String nombre, String apellidos, Date fecha_nac, Boolean genero, String imagen, String nif,
 			int movil, int movil2, int fijo, String direccion, String provincia, Set<Curriculum> curriculum) {
 		super(id, email, password, roles);
@@ -258,12 +264,6 @@ public class Candidato extends Usuario{
 		this.curriculum = curriculum;
 		// TODO Auto-generated constructor stub
 	}
-	
-
-	
-	
-
-	
 	
 	
 }
