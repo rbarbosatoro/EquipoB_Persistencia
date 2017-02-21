@@ -20,6 +20,4 @@ public class IdiomaPropertyEditor extends PropertyEditorSupport {
 		Idioma idioma= repoId.findOne(idIdioma);
 		setValue(idioma);
 	}
-	
-	
 }
