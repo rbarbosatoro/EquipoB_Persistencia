@@ -31,7 +31,6 @@ public class Experiencia {
 
 	@NotNull
 	private Date fecha_fin;
-
 	
 	private String descripcion;
 
