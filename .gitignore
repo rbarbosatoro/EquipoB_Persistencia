@@ -8,6 +8,7 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 .settings/*
+<<<<<<< HEAD
 .metadata
 bin/
 tmp/
@@ -20,3 +21,7 @@ local.properties
 .loadpath
 .recommenders
 .classpath
+=======
+.settings/
+/target/
+>>>>>>> añadido repositorios de idioma e idioma_cv
