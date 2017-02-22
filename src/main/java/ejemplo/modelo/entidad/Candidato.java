@@ -7,10 +7,10 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
+
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
-
 
 @Entity
 @DiscriminatorValue("C")
@@ -21,46 +21,44 @@ public class Candidato extends Usuario{
 	 */
 	private static final long serialVersionUID = 6339853390617801095L;
 
-	
 	@NotNull
 	@NotEmpty
 	private String nombre;
-	
+
 	@NotNull
 	@NotEmpty
 	private String apellidos;
-	
+
 	@NotNull
 	@NotEmpty
 	private Date fecha_nac;
-	
+
 	@NotNull
 	@NotEmpty
 	private Boolean genero;
-	
+
 	private String imagen;
-	
+
 	@NotNull
 	@NotEmpty
 	private String nif;
-	
+
 	@NotNull
 	@NotEmpty
 	private int movil;
-	
+
 	private int movil2;
-	
+
 	private int fijo;
-	
+
 	private String direccion;
-	
+
 	@NotNull
 	@NotEmpty
 	private String provincia;
 	
 	@OneToMany(fetch = FetchType.EAGER)
-	private Set<Curriculum>curriculum;
-
+	private Set<Curriculum> curriculum;
 
 
 	public String getNombre() {
@@ -159,6 +157,7 @@ public class Candidato extends Usuario{
 		this.curriculum = curriculum;
 	}
 
+
 	public Candidato() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -246,7 +245,6 @@ public class Candidato extends Usuario{
 		return true;
 	}
 
-
 	public Candidato(Long id, String email, String password, Set<Rol> roles ,String nombre, String apellidos, Date fecha_nac, Boolean genero, String imagen, String nif,
 			int movil, int movil2, int fijo, String direccion, String provincia, Set<Curriculum> curriculum) {
 		super(id, email, password, roles);
@@ -264,6 +262,5 @@ public class Candidato extends Usuario{
 		this.curriculum = curriculum;
 		// TODO Auto-generated constructor stub
 	}
-	
 	
 }

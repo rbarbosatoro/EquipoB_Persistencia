@@ -23,13 +23,6 @@ public class Administrador extends Usuario{
 	@NotNull
 	@NotEmpty
 	private String nombre;
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getNombre() {
 		return nombre;
@@ -51,14 +44,10 @@ public class Administrador extends Usuario{
 		return serialVersionUID;
 	}
 
-<<<<<<< HEAD
 	public Administrador() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-=======
->>>>>>> añadido repositorios de idioma e idioma_cv
 	@NotNull
 	@NotEmpty
 	private String apellidos;
