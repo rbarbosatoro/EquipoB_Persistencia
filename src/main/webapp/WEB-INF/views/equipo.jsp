@@ -45,7 +45,7 @@ String[][] creadores = {
             { "alfredo1.jpg", "alfredo2.jpg", "Alfredo Fernández García ", "Base de datos"},
             
             { "juanka1.jpg", "juanka2.jpg", "Juan Carlos Medina Martínez ", "Vistas"},
-            { "1.jpg", "2.jpg", "Pablo Fariña ", "Vistas"},
+            { "pablo1.jpg", "pablo2.jpg", "Pablo Fariña ", "Vistas"},
             { "alvaro1.jpg", "alvaro2.jpg", "Alvaro Jesús Zapata Jaraíz ", "Base de datos"},
             { "maria1.jpg", "maria2.jpg", "María Isabel Fernández Felipe", "Base de datos"},
             
