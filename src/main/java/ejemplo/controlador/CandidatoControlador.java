@@ -1,4 +1,4 @@
-package ejemplo.controller;
+package ejemplo.controlador;
 
 import javax.validation.Valid;
 
@@ -14,28 +14,33 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import ejemplo.modelo.entidad.Candidato;
+import ejemplo.modelo.propertyEditor.RolPropertyEditor;
+import ejemplo.modelo.repositorio.RepositorioCandidato;
+
 @Controller
-@RequestMapping("/")
+@RequestMapping("/candidato")
 public class CandidatoControlador {
+	
 	@Autowired
-	private CandidatoRepositorio repoCandidato;
+	private RepositorioCandidato repoCandidato;
 
 	@Autowired
-	private RolePropertyEditor roleProperty;
+	private RolPropertyEditor roleProperty;
 
-	@RequestMapping(method = RequestMethod.GET, value = { "/login", "/" })
-	public String loginInicio(Model model) {
-
-		return "index";
-	}
-
-	@RequestMapping(method = RequestMethod.POST, value = { "/login", "/" })
-	public String loginInicio(Model model, @Valid @ModelAttribute Usuario per, BindingResult bindingResult) {
+	@RequestMapping(method = RequestMethod.POST, value = "/login")
+	public String loginInicio(Model model, @Valid @ModelAttribute Candidato per, BindingResult bindingResult) {
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		per.setContrasena(encoder.encode(per.getPassword()));
 		repoCandidato.save(per);
 		model.addAttribute("Mensaje", "Se ha registrado correctamente");
 		return "index";
+	}
+	
+
+	@RequestMapping(method = RequestMethod.GET)
+	public String listarCandidato(Model model) {
+		model.addAttribute("candidato", repoCandidato.findAll());
+		return "";
 	}
 
 	@InitBinder
