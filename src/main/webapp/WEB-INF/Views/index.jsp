@@ -67,7 +67,7 @@
 						<input type="select" class="form-control input-lg" list="provincias">
   						<datalist id="provincias">
     						<option>Selecciona Provincia</option>
-    						<option><c:for></option>
+    						<option>AQUI IRIAN LAS PROVINCIAS DE LA BD</option>
   						</datalist>
   						</input>
 					</div>	
@@ -90,7 +90,69 @@
    	<div class="col-md-5"></div>
    	</div>
    	
-   	<div id="foto">qjhsdklqgedlhkqgdljh	qgdhjegdjqhwdg	jwhgdkj</div>
+   	<div id="foto">
+   	<%
+   	String [][] creadores = {
+            
+            { "dani1.jpg", "dani2.jpg", "Daniel Sánchez Martín ", "Base de datos"},
+            { "david1.jpg", "david2.jpg", "David Jurado Ortega ", "Controladores"},
+            { "jose1.jpg", "jose2.jpg", "José Manuel Cantero Cantero ", "Vistas"},
+            { "angel1.jpg", "angel2.jpg", "Ángel Jesús Expósito Caro ", "Controladores"},
+            
+            { "1.jpg", "2.jpg", "David Roman Carabantes ", "Vistas"},
+            { "maca1.jpg", "maca2.jpg", "Macarena Casañas Suárez ", "Controladores"},
+            { "daniel1.jpg", "daniel2.jpg", "Daniel Sáez Montes ", "Controladores"},
+            { "alfredo1.jpg", "alfredo2.jpg", "Alfredo Fernández García ", "Base de datos"},
+            
+            { "juanka1.jpg", "juanka2.jpg", "Juan Carlos Medina Martínez ", "Vistas"},
+            { "1.jpg", "2.jpg", "Pablo Fariña ", "Vistas"},
+            { "alvaro1.jpg", "alvaro2.jpg", "Alvaro Jesús Zapata Jaraíz ", "Base de datos"},
+            { "maria1.jpg", "maria2.jpg", "María Isabel Fernández Felipe", "Base de datos"},
+            
+            { "juancarlos1.jpg", "juancarlos2.jpg", "Juan Carlos Lumbreras Díaz", "Base de datos"},
+            { "ruben1.jpg", "ruben2.jpg", "Rubén Barbosa Toro ", "Base de datos"},
+            { "joel1.jpg", "joel2.jpg", "Joel Jackson Castaño ", "Controladores"},
+            { "vero1.jpg", "vero2.jpg", "Verónica Galván Esperilla", "Vistas"},
+            
+            { "mana1.jpg", "mana2.jpg", "Manasés Sánchez González ", "Controladores"},
+            { "sergio1.jpg", "sergio2.jpg", "Sergio Jesús Caro Arroyo ", "Vistas"},
+            { "jesus1.jpg", "jesus2.jpg", "Jesús  ", "Scrum Master"},
+            
+            
+        };
+%>
+<div >
+
+<div class="row"style="text-align: center;	">
+			 
+	 <img alt=""src="http://www.riter-com.ru/wp-content/uploads/2014/11/business128.svg"style="height:150px;"><br>
+				<br>
+				</div></div>
+
+        <h2 style="text-align: center">Nuestro equipo:</h2>
+   
+  
+    
+                <div  class="row">
+   
+        <div style="text-align: center" class="col-md-12">
+            
+             
+            <%
+                for (int i = 0; i < creadores.length; i++) {
+            %>
+                <div class="col-md-3">
+                    <img class="main" src="${path}/static/img/<%=creadores[i][0] %>" width="250px">
+                    <img class="alternativa" src="${path}/static/img/<%=creadores[i][1] %>" width="250px">            
+                    <h5><%= creadores[i][2] %> </h5>
+                    <h5><%= creadores[i][3] %></h5>
+                </div>
+             <%
+                }
+            %>
+        </div>
+    </div>
+</div>
     
   </div>  
 	<div class="modal fade" id="modal-login" tabindex="-1" role="dialog"
@@ -139,13 +201,13 @@
 						<div class="row">
 							<div align="left" class="col-md-6 text-center">
 								<button type="button" class="btn btn-default">
-									<a href="***">Candidato   <span
+									<a href="/src/main/webapp/WEB-INF/Views/regcandidato.jsp">Candidato   <span
 										class="glyphicon glyphicon-user"></span></a>
 								</button>
 							</div>
 							<div align="right" class="col-md-6 text-center">
 								<button type="button" class="btn btn-default">
-									<a href="***">Empresa   <span class="glyphicon glyphicon-lock"></span></a>
+									<a href="/src/main/webapp/WEB-INF/Views/resgistroEmpresa.jsp">Empresa   <span class="glyphicon glyphicon-lock"></span></a>
 								</button>
 							</div>
 						</div>
