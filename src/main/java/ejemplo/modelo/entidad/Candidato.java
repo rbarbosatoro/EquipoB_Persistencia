@@ -164,6 +164,11 @@ public class Candidato extends Usuario{
 	}
 
 
+	public Candidato() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -236,6 +241,29 @@ public class Candidato extends Usuario{
 		return true;
 	}
 
+	public Candidato(Long id, String email, String password, Set<Rol> roles ,String nombre, String apellidos, Date fecha_nac, Boolean genero, String imagen, String nif,
+			int movil, int movil2, int fijo, String direccion, String provincia, Set<Curriculum> curriculum) {
+		super(id, email, password, roles);
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.fecha_nac = fecha_nac;
+		this.genero = genero;
+		this.imagen = imagen;
+		this.nif = nif;
+		this.movil = movil;
+		this.movil2 = movil2;
+		this.fijo = fijo;
+		this.direccion = direccion;
+		this.provincia = provincia;
+		this.curriculum = curriculum;
+		// TODO Auto-generated constructor stub
+	}
+	
+
+	
+	
+
+	
 	
 	
 }
