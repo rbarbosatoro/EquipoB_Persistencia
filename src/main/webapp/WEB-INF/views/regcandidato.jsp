@@ -33,7 +33,7 @@
     background-position: center center; ">
 
 
-	<form action="Candidato" method="post">
+	<form action="candidato" method="post">
 
 		<div  class="row">
 			<div class="col-md-4"></div>

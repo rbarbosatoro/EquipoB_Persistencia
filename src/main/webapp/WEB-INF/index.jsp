@@ -126,13 +126,13 @@
 						{ "jose1.jpg", "jose2.jpg", "José Manuel Cantero Cantero ", "Vistas" },
 						{ "angel1.jpg", "angel2.jpg", "Ángel Jesús Expósito Caro ", "Controladores" },
 
-						{ "1.jpg", "2.jpg", "David Roman Carabantes ", "Vistas" },
+						{ "davi1.jpg", "davi2.jpg", "David Roman Carabantes ", "Vistas" },
 						{ "maca1.jpg", "maca2.jpg", "Macarena Casañas Suárez ", "Controladores" },
 						{ "daniel1.jpg", "daniel2.jpg", "Daniel Sáez Montes ", "Controladores" },
 						{ "alfredo1.jpg", "alfredo2.jpg", "Alfredo Fernández García ", "Base de datos" },
 
 						{ "juanka1.jpg", "juanka2.jpg", "Juan Carlos Medina Martínez ", "Vistas" },
-						{ "1.jpg", "2.jpg", "Pablo Fariña ", "Vistas" },
+						{ "pablo1.jpg", "pablo2.jpg", "Pablo Fariña ", "Vistas" },
 						{ "alvaro1.jpg", "alvaro2.jpg", "Alvaro Jesús Zapata Jaraíz ", "Base de datos" },
 						{ "maria1.jpg", "maria2.jpg", "María Isabel Fernández Felipe", "Base de datos" },
 
