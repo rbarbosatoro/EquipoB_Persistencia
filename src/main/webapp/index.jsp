@@ -193,7 +193,7 @@ String[][] creadores = {
 						<div class="row">
 							<div align="left" class="col-md-6 text-center">
 								<button type="button" class="btn btn-default">
-									<a href="***">Candidato   <span
+									<a href="/***">Candidato   <span
 										class="glyphicon glyphicon-user"></span></a>
 								</button>
 							</div>

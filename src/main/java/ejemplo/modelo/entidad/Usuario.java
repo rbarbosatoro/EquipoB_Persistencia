@@ -46,7 +46,23 @@ public abstract class Usuario implements UserDetails{
 	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Rol> roles;
 	
+	public Usuario() {
+		// TODO Auto-generated constructor stub
+	}
 	
+	public Usuario(Long id, String email, String password, Set<Rol> roles) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.password = password;
+		this.roles = roles;
+	}
+
+
+
+
+
+
 	public Long getId() {
 		return id;
 	}

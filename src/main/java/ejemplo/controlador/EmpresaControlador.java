@@ -36,34 +36,34 @@ public class EmpresaControlador {
 	@RequestMapping(method = RequestMethod.GET)
 	public String listaEmpresa(Model model) {
 		model.addAttribute("empresas", repoEmp.findAll());
-		return "pages/empresas";
+		return "***";
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/detalle/{id}")
 	public String detalleEmpresa(Model model, @PathVariable long id) {
 		model.addAttribute("empresa", repoEmp.findOne(id));
-		return "pages/detalleEmpresa";
+		return "views/perfilEmpresa";
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/oferta/{id}")
 	private String detallesOfertaEmpresa(Model model, @PathVariable long id) {
 
 		model.addAttribute("oferta", repoOfer.findOne(id));
-		return "page/detalleOfertasEmpresa";
+		return "views/detalleOferta";
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
 	public String guardarEmpresa(Model model, @Valid @ModelAttribute Empresa empresa, BindingResult bindingResult) {
 		repoEmp.save(empresa);
 		model.addAttribute("empresa", repoEmp.findAll());
-		return "pages/empresaListado";
+		return "/index";
 	}
 
 	@RequestMapping(value = "/oferta", method = RequestMethod.POST)
 	public String guardarOferta(Model model, @Valid @ModelAttribute Oferta oferta, BindingResult bindingResult) {
 		repoOfer.save(oferta);
 		model.addAttribute("oferta", repoOfer.findAll());
-		return "pages/empresaListado";
+		return "views/perfilEmpresa";
 	}
 
 	@RequestMapping(value = " /{id}", method = RequestMethod.DELETE)

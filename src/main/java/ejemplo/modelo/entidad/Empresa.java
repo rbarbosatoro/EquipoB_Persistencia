@@ -151,6 +151,25 @@ public class Empresa extends Usuario {
 			return false;
 		return true;
 	}
+
+	public Empresa() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+	public Empresa(Long id, String email, String password, Set<Rol> roles, String nombre, String direccion, String numeroEmpleado, String logotipo, String sector,
+			String descripcion, Set<Oferta> oferta) {
+		super(id, email, password, roles);
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.numeroEmpleado = numeroEmpleado;
+		this.logotipo = logotipo;
+		this.sector = sector;
+		this.descripcion = descripcion;
+		this.oferta = oferta;
+	}
 	
 	
 	

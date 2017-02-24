@@ -44,6 +44,11 @@ public class Administrador extends Usuario{
 		return serialVersionUID;
 	}
 
+	public Administrador() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@NotNull
 	@NotEmpty
 	private String apellidos;
@@ -77,6 +82,12 @@ public class Administrador extends Usuario{
 		} else if (!nombre.equals(other.nombre))
 			return false;
 		return true;
+	}
+
+	public Administrador(String nombre, String apellidos) {
+		super();
+		this.nombre = nombre;
+		this.apellidos = apellidos;
 	}
 	
 }
