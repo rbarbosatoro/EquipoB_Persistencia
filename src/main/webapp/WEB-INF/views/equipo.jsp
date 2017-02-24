@@ -29,6 +29,7 @@
     crossorigin="anonymous"></script>
 <title>Insert title here</title>
 </head>
+
 <body style="background-image: url('https://k39.kn3.net/taringa/6/5/2/1/3/1/4/b2kcarolina/503.jpg?8605'); background-size:cover; background-repeat: no-repeat;
     background-position: center center; ">
 <%
@@ -61,24 +62,11 @@ String[][] creadores = {
             
         };
 %>
-<div >
+
 
 <div class="row"style="text-align: center;	">
 			 
-	 <img alt=""src="http://www.riter-com.ru/wp-content/uploads/2014/11/business128.svg"style="height:150px;"><br>
-				<br>
-				</div></div>
-
-        <h2 style="text-align: center">Nuestro equipo:</h2>
-   
-  
-    
-                <div  class="row">
-   
-        <div style="text-align: center" class="col-md-12">
-            
-             
-            <%
+	   <%
                 for (int i = 0; i < creadores.length; i++) {
             %>
                 <div class="col-md-3">
@@ -90,7 +78,6 @@ String[][] creadores = {
              <%
                 }
             %>
-        </div>
     </div>
     
    
