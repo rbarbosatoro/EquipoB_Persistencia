@@ -19,4 +19,7 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+<<<<<<< HEAD
 .classpath
+=======
+>>>>>>> Modificado .gitignore , y nuevo index
