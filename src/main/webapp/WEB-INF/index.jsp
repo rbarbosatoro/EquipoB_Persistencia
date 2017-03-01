@@ -65,7 +65,7 @@
 				Sesión</button>
 			</td>
 			<button type="button" align="left" class="btn btn-default"
-				data-toggle="modal" data-target="#modal-registro">Registrarse</button>
+				data-toggle="modal" data-target="#modal-registro">Registrarste</button>
 			</td>
 		</div>
 		<div class="col-md-4"></div>
