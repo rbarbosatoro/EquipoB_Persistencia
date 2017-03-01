@@ -36,19 +36,6 @@
 <link
 	href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"
 	rel="stylesheet" type="text/css">
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-	crossorigin="anonymous"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$("#foto").hide();
-
-		$("#btn-quienes").on("click", function() {
-			$("#foto").toggle();
-		});
-		
-		$('.alternativa').hide();
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -181,7 +168,6 @@
 
 		</div>
 		<!-- /.container -->
-
 	</div>
 	<!-- /.intro-header -->
 
