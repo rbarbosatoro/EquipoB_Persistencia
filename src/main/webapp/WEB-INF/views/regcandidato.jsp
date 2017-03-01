@@ -174,8 +174,7 @@
 
 		
 
-		<input type="hidden" id="_csrf" name="_csrf" value="${_csrf.token}">
-
+		
 
 
 
@@ -195,5 +194,7 @@
 		</div>
 		</div>	
 		</footer>
+		<input type="hidden" id="_csrf" name="_csrf" value="${_csrf.token}">
+		
 </body>
 </html>

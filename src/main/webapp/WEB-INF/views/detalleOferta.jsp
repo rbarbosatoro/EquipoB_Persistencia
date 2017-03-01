@@ -71,6 +71,7 @@
 
 
 
+<input type="hidden" id="_csrf" name="_csrf" value="${_csrf.token}">
 
 
 </body>

@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -69,7 +70,7 @@
 							<td>${candidato.apellidos}</td>
 						</tr>
 						<tr>
-							<th>Teléfono</th>
+							<th>TelÃ©fono</th>
 							<td>${candidato.telefono}</td>
 						</tr>
 					</tbody>
@@ -79,18 +80,18 @@
 			<div class="col-md-12 text-center">
 				<div class="col-md-4 text-center">
 					<button class="btn btn-primary" type="submit" data-toggle="modal"
-						data-target="#modal-experiencia" href="#modal-experiencia">Añadir
+						data-target="#modal-experiencia" href="#modal-experiencia">AÃ±adir
 						Experiencia</button>
 				</div>
 				<div class="col-md-4 text-center">
 					<button class="btn btn-primary" type="submit" data-toggle="modal"
-						data-target="#modal-formacion" href="#modal-formacion">Añadir
+						data-target="#modal-formacion" href="#modal-formacion">AÃ±adir
 						Formacion</button>
 				</div>
 				<div class="col-md-4 text-center">
 					<div class="col-md-12">
 						<button class="btn btn-primary" type="submit" data-toggle="modal"
-							data-target="#modal-idioma" href="#modal-idioma">Añadir
+							data-target="#modal-idioma" href="#modal-idioma">AÃ±adir
 							Idioma</button>
 					</div>
 				</div>
@@ -110,7 +111,7 @@
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal"
 								aria-hidden="true">&times;</button>
-							<h4 class="modal-title">Añadir idioma</h4>
+							<h4 class="modal-title">AÃ±adir idioma</h4>
 						</div>
 						<form method="POST" role="form" action="<c:url value=''/>">
 
@@ -118,7 +119,7 @@
 								<div class="form-group">
 									<label for="Nombre">Idioma</label> <input type="text"
 										class="form-control" id="idioma" name="idioma"
-										placeholder="Título del idioma">
+										placeholder="TÃ­tulo del idioma">
 								</div>
 								<div class="form-group">
 									<label for="autor">Nivel</label> <select name="nivel"
@@ -153,7 +154,7 @@
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal"
 								aria-hidden="true">&times;</button>
-							<h4 class="modal-title text-center">Añadir Experiencia</h4>
+							<h4 class="modal-title text-center">AÃ±adir Experiencia</h4>
 						</div>
 						<form method="post" role="form"
 							action="<c:url value='/experiencia' /> ">
@@ -172,21 +173,21 @@
 										placeholder="00/00/0000">
 								</div>
 								<div class="form-group">
-									<label for="">Fecha de finalización</label> <input
+									<label for="">Fecha de finalizaciÃ³n</label> <input
 										name="Fechafinalizacion" type="date" class="form-control"
 										id="exfinalizacion" placeholder="00/00/0000">
 								</div>
 								<div class="form-group">
-									<label for="">Descripción</label> <input name="Descripcion"
+									<label for="">DescripciÃ³n</label> <input name="Descripcion"
 										type="text" class="form-control" id="exdescripcion"
-										placeholder="Descripción">
+										placeholder="DescripciÃ³n">
 								</div>
 							</div>
 						</form>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default"
 								data-dismiss="modal">Cerrar</button>
-							<button type="submit" class="btn btn-primary">Añadir</button>
+							<button type="submit" class="btn btn-primary">AÃ±adir</button>
 						</div>
 
 					</div>
@@ -200,14 +201,14 @@
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal"
 								aria-hidden="true">&times;</button>
-							<h4 class="modal-title text-center">Añadir Formación</h4>
+							<h4 class="modal-title text-center">AÃ±adir FormaciÃ³n</h4>
 						</div>
 						<form method="POST" role="form"
 							action="<c:url value='/formacion' />">
 							<div class="modal-body">
 								<div class="form-group">
 									<label for="">Titulo</label> <input name="Titulo" type="titulo"
-										class="form-control" id="fortitulo" placeholder="Título">
+										class="form-control" id="fortitulo" placeholder="TÃ­tulo">
 								</div>
 								<div class="form-group">
 									<label for="">Especialidad</label> <input name="Especialidad"
@@ -220,7 +221,7 @@
 										id="forinicio" placeholder="00/00/0000">
 								</div>
 								<div class="form-group">
-									<label for="">Fecha de finalización</label> <input
+									<label for="">Fecha de finalizaciÃ³n</label> <input
 										name="Fechafinalizacion2" type="text" class="form-control"
 										id="forfina" placeholder="00/00/0000">
 
@@ -236,7 +237,7 @@
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default"
 								data-dismiss="modal">Cerrar</button>
-							<button type="submit" class="btn btn-primary" id="">Añadir</button>
+							<button type="submit" class="btn btn-primary" id="">AÃ±adir</button>
 						</div>
 						<input type="hidden" id="_csrf" name="_csrf"
 							value="${_csrf.token}">
@@ -263,10 +264,10 @@
 					</thead>
 					<tr class="text-center">
 						<td style="width: 10%">Fecha de inicio</td>
-						<td style="width: 10%">Fecha de finalización</td>
+						<td style="width: 10%">Fecha de finalizaciÃ³n</td>
 						<td style="width: 10%">Empresa</td>
 						<td style="width: 10%">Puesto</td>
-						<td style="width: 10%">Descripción</td>
+						<td style="width: 10%">DescripciÃ³n</td>
 						<td style="width: 10%"><button id="editarexperiencia"
 								type="submit" class="editar-experiencia btn btn-success"
 								data-toggle="modal" data-target="#modal-experiencia">Editar</button></td>
@@ -306,12 +307,12 @@
 				<table
 					class="table table-hover table-condensed table-striped table-bordered">
 					<thead colspan="7">
-						<th class="text-center" colspan="7" id="toogleFormacion"><h4>Formación</h4></th>
+						<th class="text-center" colspan="7" id="toogleFormacion"><h4>FormaciÃ³n</h4></th>
 					</thead>
 					<tr class="text-center">
 						<td style="width: 10%">Fecha de inicio</td>
-						<td style="width: 10%">Fecha de finalización</td>
-						<td style="width: 10%">Título</td>
+						<td style="width: 10%">Fecha de finalizaciÃ³n</td>
+						<td style="width: 10%">TÃ­tulo</td>
 						<td style="width: 10%">Especialidad</td>
 						<td style="width: 10%">Centro</td>
 						<td style="width: 10%"><button id="editarformacion"
@@ -382,6 +383,7 @@
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
 	<div class="col-md-12 text-center">
 		<div class="col-md-6 text-center">
 			<button class="btn btn-primary" type="submit"">Crear
@@ -389,5 +391,10 @@
 		</div>
 		<div class="col-md-6 text-center">
 			<button class="btn btn-primary" type="submit">Actualizar</button>
+=======
+
+<input type="hidden" id="_csrf" name="_csrf" value="${_csrf.token}">
+
+>>>>>>> seguridad
 </body>
 </html>
