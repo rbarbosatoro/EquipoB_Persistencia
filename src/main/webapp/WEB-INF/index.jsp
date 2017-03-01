@@ -31,9 +31,9 @@
 		$("#foto").hide();
 
 		$("#btn-quienes").on("click", function() {
-			$("#foto").show();
+			$("#foto").toggle();
 		});
-
+		
 		$('.alternativa').hide();
 
 		$('.main').on("mouseenter", function() {
