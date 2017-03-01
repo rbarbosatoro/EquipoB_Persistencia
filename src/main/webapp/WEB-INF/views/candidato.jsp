@@ -31,9 +31,10 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
+<meta name="_csrf_header" content="${_csrf.headerName}" />
 </head>
-<body style="background-image: url('https://k39.kn3.net/taringa/6/5/2/1/3/1/4/b2kcarolina/503.jpg?8605'); background-size:cover; background-repeat: no-repeat;
-    background-position: center center; ">
+<body
+	style="background-image: url('https://k39.kn3.net/taringa/6/5/2/1/3/1/4/b2kcarolina/503.jpg?8605'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
 
 	<h1>Bienvenido NOMBRE_CANDIDATO</h1>
 
@@ -41,7 +42,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
-				<table id="datoscandidato" class="table table-hover" style="background: white">
+				<table id="datoscandidato" class="table table-hover"
+					style="background: white">
 					<tbody>
 						<tr>
 							<td style="text-align: right">Nombre:</td>
@@ -57,7 +59,7 @@
 						</tr>
 						<tr>
 							<td style="text-align: right">Fecha Nacimiento:</td>
-							<td id="cfechanac"style="text-align: left">FECHANAC_CANDIDATO</td>
+							<td id="cfechanac" style="text-align: left">FECHANAC_CANDIDATO</td>
 						</tr>
 						<tr>
 							<td style="text-align: right">Dirección:</td>
@@ -69,18 +71,19 @@
 						</tr>
 						<tr>
 							<td style="text-align: right">Móvil:</td>
-							<td id="cmovil"style="text-align: left">MOVIL_CANDIDATO</td>
+							<td id="cmovil" style="text-align: left">MOVIL_CANDIDATO</td>
 						</tr>
 						<tr>
 							<td style="text-align: right">Móvil Secundario:</td>
-							<td id="cmovil2"style="text-align: left">MOVIL2_CANDIDATO</td>
+							<td id="cmovil2" style="text-align: left">MOVIL2_CANDIDATO</td>
 						</tr>
 					</tbody>
 				</table>
 				<div class="row" style="height: 100px;">
 					<div class="col-md-12">
 						<p></p>
-						<a class="btn btn-primary" id="btn-dperfil" data-toggle="modal" href='#modal-candidato'>Editar Datos Perfil</a>
+						<a class="btn btn-primary" id="btn-dperfil" data-toggle="modal"
+							href='#modal-candidato'>Editar Datos Perfil</a>
 						<p></p>
 					</div>
 				</div>
@@ -89,12 +92,10 @@
 				<h3>Encuentra el trabajo que buscas</h3>
 				<form class="form-inline">
 					<div class="form-group">
-
 						<input type="text" class="form-control" id="buscar"
 							placeholder="Buscar...">
 					</div>
 					<div class="form-group">
-
 						<select class="form-control" id="provincias">
 							<option>NOMBRE_PROVINCIA_1</option>
 							<option>NOMBRE_PROVINCIA_2</option>
@@ -102,84 +103,92 @@
 						</select>
 					</div>
 					<button type="submit" class="btn btn-default">BUSCAR</button>
+					<input type="hidden" id="_csrf" name="_csrf"
+							value="${_csrf.token}">
+				</form>
+				<p></p>
+				<!--  -->
 
-					<p></p>
-					<!--  -->
-		
-	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-	  <h3>Listado de Cartas:</h3>
-	  
-		  <div class="panel panel-default" id="idcarta ${carta.id} ">
-		    <div class="panel-heading" role="tab" id="headingOne">
-		      	<h4 class="panel-title">
-		      	<input type="hidden" value="${carta.id}">
-		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-		          TITULO
-		        </a>
-		        <button type="button" class="btn btn-danger btn-xs pull-right boton-borrar-modal-carta" data-toggle="modal" data-target="#modal-borrar">Borrar</button>	
-		        <button type="button" class="btn btn-primary btn-xs btn-editar-carta pull-right" >Editar</button>
-				
-		      </h4>
-		    </div>
-		    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-		      <div class="panel-body">
-		        DESCRIPCION
-		      </div>
-		    </div>
-		  </div>
-		  <c:forEach items="${cartas}" var="carta"><!-- RECORDATORIO: SUBIR -->
-	  </c:forEach>
-	  
-	</div>
-	
-	<p></p>
-		<a class="btn btn-primary" data-toggle="modal" href='#modal-carta'>Añadir Carta Presentación</a>
-	<p></p>
-	<!-- Introducimos el listado de CV -->	
-	<h3>Listado de CV:</h3>
+				<div class="panel-group" id="accordion" role="tablist"
+					aria-multiselectable="true">
+					<h3>Listado de Cartas:</h3>
 
-						<table
-							class="table table-hover table-condensed table-striped table-bordered" style="background: white";>
-							<thead>
-								<tr>
-									<td style="width: 10%">#</td>
-									<td style="width: 50%">Titulo</td>
-									<td style="width: 10%">Editar</td>
-									<td style="width: 10%">Borrar</td>
-								</tr>
-							</thead>
-							<tbody>
+					<div class="panel panel-default" id="idcarta ${carta.id} ">
+						<div class="panel-heading" role="tab" id="headingOne">
+							<h4 class="panel-title">
+								<input type="hidden" value="${carta.id}"> <a
+									role="button" data-toggle="collapse" data-parent="#accordion"
+									href="#collapseOne" aria-expanded="true"
+									aria-controls="collapseOne"> TITULO </a>
+								<button type="button"
+									class="btn btn-danger btn-xs pull-right boton-borrar-modal-carta"
+									data-toggle="modal" data-target="#modal-borrar">Borrar</button>
+								<button type="button"
+									class="btn btn-primary btn-xs btn-editar-carta pull-right">Editar</button>
 
-									<tr data-id="${cv.id}">
-										<td>${cv.id}</td>
-										<td>${cv.titulo}</td>
-										<td><a class="btn btn-primary" href="EDITARCV_CONTROLLER/${cv.id}" >Editar</a></td>
-										<td> <button type="button" class="btn btn-danger pull-right boton-borrar-modal-cv" data-toggle="modal" data-target="#modal-borrar-cv">Borrar</button></td>
-										
-									</tr>
-								<c:forEach items="${cv}" var="cv"> <!-- RECORDATORIO: SUBIR -->
-								</c:forEach>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td colspan="5">Curriculums Registrados: <span
-										id="cantidad-cv">${cvs.size()}</span></td>
-								</tr>
-								
-							</tfoot>
-						</table>
-						<div id="anadircvs">
-									<a class="btn btn-primary" data-toggle="modal" href='REGISTRARCV_CONTROLLER'>Añadir CV</a>
+							</h4>
 						</div>
+						<div id="collapseOne" class="panel-collapse collapse in"
+							role="tabpanel" aria-labelledby="headingOne">
+							<div class="panel-body">DESCRIPCION</div>
+						</div>
+					</div>
+					<c:forEach items="${cartas}" var="carta">
+						<!-- RECORDATORIO: SUBIR -->
+					</c:forEach>
+
+				</div>
+
+				<p></p>
+				<a class="btn btn-primary" data-toggle="modal" href='#modal-carta'>Añadir
+					Carta Presentación</a>
+				<p></p>
+				<!-- Introducimos el listado de CV -->
+				<h3>Listado de CV:</h3>
+
+				<table
+					class="table table-hover table-condensed table-striped table-bordered"
+					style="background: white">
+					<thead>
+						<tr>
+							<td style="width: 10%">#</td>
+							<td style="width: 50%">Titulo</td>
+							<td style="width: 10%">Editar</td>
+							<td style="width: 10%">Borrar</td>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr data-id="${cv.id}">
+							<td>${cv.id}</td>
+							<td>${cv.titulo}</td>
+							<td><a class="btn btn-primary"
+								href="EDITARCV_CONTROLLER/${cv.id}">Editar</a></td>
+							<td>
+								<button type="button"
+									class="btn btn-danger pull-right boton-borrar-modal-cv"
+									data-toggle="modal" data-target="#modal-borrar-cv">Borrar</button>
+							</td>
+
+						</tr>
+						<c:forEach items="${cv}" var="cv">
+							<!-- RECORDATORIO: SUBIR -->
+						</c:forEach>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="5">Curriculums Registrados: <span
+								id="cantidad-cv">${cvs.size()}</span></td>
+						</tr>
+
+					</tfoot>
+				</table>
+				<div id="anadircvs">
+					<a class="btn btn-primary" data-toggle="modal"
+						href='REGISTRARCV_CONTROLLER'>Añadir CV</a>
+				</div>
 			</div>
 		</div>
-		
-		
-		
-		
-		
-
-
 	</div>
 	<!-- del container -->
 
@@ -202,26 +211,26 @@
 						<div class="form-group">
 							<label for="Titulo">Titulo Carta:</label> <input type="text"
 								class="form-control" id="cartatitulo-candidato" name="titulo"
-								placeholder="">
-							<label>Descripción:</label>
-							<textarea type="text" class="form-control" id="descripcioncarta-candidato"
-								name="descripcioncarta" placeholder="" rows=10 cols=50></textarea>
+								placeholder=""> <label>Descripción:</label>
+							<textarea type="text" class="form-control"
+								id="descripcioncarta-candidato" name="descripcioncarta"
+								placeholder="" rows=10 cols=50></textarea>
 						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						<button type="submit" class="btn btn-primary">Guardar</button>
 					</div>
-					
+
 					<input type="hidden" id="_csrf" name="_csrf" value="${_csrf.token}">
-					
+
 				</form>
 			</div>
 		</div>
 	</div>
 	<!-- fin Modal de carta -->
 
-<!-- Modal Candidato -->
+	<!-- Modal Candidato -->
 
 
 	<div class="modal fade" id="modal-candidato">
@@ -235,7 +244,7 @@
 				<div class="modal-body">
 					<form method="POST" action="<c:url value="/candidatos" />"
 						role="form">
-						
+
 
 
 						<div class="form-group">
@@ -284,9 +293,10 @@
 								data-dismiss="modal">Close</button>
 							<button type="submit" class="btn btn-primary">Guardar</button>
 						</div>
-						
-						<input type="hidden" id="_csrf" name="_csrf" value="${_csrf.token}">
-						
+
+						<input type="hidden" id="_csrf" name="_csrf"
+							value="${_csrf.token}">
+
 					</form>
 				</div>
 			</div>
@@ -294,8 +304,8 @@
 	</div>
 
 
-<!-- fin Modal Candidato -->
-<!-- Borrar Carta -->
+	<!-- fin Modal Candidato -->
+	<!-- Borrar Carta -->
 	<div class="modal fade" id="modal-borrar">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -305,8 +315,8 @@
 					<h4 class="modal-title">¿Estas seguro?</h4>
 				</div>
 				<div class="modal-body">
-					¿Estas seguro?¿Quieres Borrarlo? 
-					<input type="hidden" id="idmodalcarta" value="">
+					¿Estas seguro?¿Quieres Borrarlo? <input type="hidden"
+						id="idmodalcarta" value="">
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
@@ -316,8 +326,8 @@
 			</div>
 		</div>
 	</div>
-<!-- Borrar CV -->
-<div class="modal fade" id="modal-borrar-cv">
+	<!-- Borrar CV -->
+	<div class="modal fade" id="modal-borrar-cv">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -326,8 +336,8 @@
 					<h4 class="modal-title">¿Estas seguro?</h4>
 				</div>
 				<div class="modal-body">
-					¿Estas seguro?¿Quieres Borrarlo? 
-					<input type="hidden" id="idmodalcv" value="">
+					¿Estas seguro?¿Quieres Borrarlo? <input type="hidden"
+						id="idmodalcv" value="">
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">No</button>

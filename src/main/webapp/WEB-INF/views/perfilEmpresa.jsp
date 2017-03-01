@@ -49,7 +49,6 @@
 </head>
 <body
 	style="background-image: url('https://k39.kn3.net/taringa/6/5/2/1/3/1/4/b2kcarolina/503.jpg?8605'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
-
 	<div class="container">
 		<div class="row text-center" style="margin-top: 50px">
 			<div class="col-md-6">
@@ -63,7 +62,6 @@
 
 			</div>
 			<!-- Datos de la empresa -->
-
 			<div class="col-md-6 text-center">
 				<div class="col-md-6 text-center">
 					<img src="${empresa.logo}"
@@ -71,8 +69,6 @@
 						style="width: 200px; height: 150px;">
 				</div>
 				<div class="col-md-6 text-center">
-
-
 					<p id="empnomb">$-{empresa.nombre}</p>
 					<p id="empdescrip">$-{empresa.descripcion}</p>
 					<p id="empsect">$-{empresa.sector}</p>
@@ -80,8 +76,6 @@
 					<p>
 					<p id="empmail">$-{empresa.email}</p>
 					<p id="empdirec">$-{empresa.direccion}</p>
-
-
 					<p>
 						<button class="btn btn-warning" type="submit"
 							id="editar-datos-empresa" data-toggle="modal"
@@ -102,7 +96,6 @@
 							aria-hidden="true">&times;</button>
 						<h4 class="modal-datempres text-center">Editar datos</h4>
 					</div>
-
 					<form method="POST" action="<c:url value="***"/>">
 						<div class="modal-body">
 
@@ -152,6 +145,8 @@
 							</div>
 
 						</div>
+						<input type="hidden" id="_csrf" name="_csrf"
+							value="${_csrf.token}">
 					</form>
 
 					<div class="modal-footer">
@@ -177,12 +172,9 @@
 					</c:forEach>
 				</tbody>
 			</table>
-
 		</div>
 
 		<!-- modal registro de oferta de empresa -->
-
-
 		<div class="modal fade" id="annadiroferta">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -279,7 +271,8 @@
 								</div>
 							</div>
 						</div>
-
+						<input type="hidden" id="_csrf" name="_csrf"
+							value="${_csrf.token}">
 					</form>
 
 					<div class="modal-footer">

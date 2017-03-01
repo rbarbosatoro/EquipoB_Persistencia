@@ -64,6 +64,75 @@
     </script>
 
 </head>
+<<<<<<< HEAD
+=======
+<body
+	style="background-image: url('https://k39.kn3.net/taringa/6/5/2/1/3/1/4/b2kcarolina/503.jpg?8605'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4 text-center" id="marco">
+			<button type="button" align="right" class="btn btn-default"
+				data-toggle="modal" data-target="#modal-login">Iniciar
+				Sesión</button>
+			<td>
+			<button type="button" align="left" class="btn btn-default"
+				data-toggle="modal" data-target="#modal-registro">Registrarste</button>
+			</td>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div class="row text-center">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<form class="form form-horizontal" role="search">
+				<div class="form-group">
+					<div class="col-md-12">
+						<div class="container">
+							<div class="row col-md-9">
+								<input type="text" class="form-control input-lg" id="search"
+									placeholder="ejem. Programador Madrid">
+							</div>
+							<div class="row col-md-3">
+								<input type="select" class="form-control input-lg"
+									list="provincias">
+								<datalist id="provincias">
+								<option>Selecciona Provincia</option>
+								<option>AQUI IRIAN LAS PROVINCIAS DE LA BD</option>
+								</datalist>
+								</input>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-default">
+					<span class="glyphicon glyphicon-search"></span> Buscar Empleo
+				</button>
+			</form>
+		</div>
+		<div class="col-md-1"></div>
+		<br>
+		<br>
+		<br>
+		<br> <br>
+		<br>
+		<br>
+		<br>
+		<div class="row" id="boton_fotos">
+			<div class="col-md-5"></div>
+			<div class="col-md-2">
+				<button type="button" align="center" id="btn-quienes"
+					class="btn btn-default">Quienes Somos</button>
+			</div>
+			<div class="col-md-5"></div>
+		</div>
+>>>>>>> Modificada la seguridad
 
 <body>
 

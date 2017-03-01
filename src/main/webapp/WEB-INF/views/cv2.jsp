@@ -140,6 +140,7 @@
 									data-dismiss="modal">Cerrar</button>
 								<button type="submit" class="btn btn-primary">Guardar</button>
 							</div>
+							<input type="hidden" id="_csrf" name="_csrf" value="${_csrf.token}">
 						</form>
 					</div>
 				</div>
@@ -183,6 +184,7 @@
 										placeholder="DescripciÃ³n">
 								</div>
 							</div>
+							<input type="hidden" id="_csrf" name="_csrf" value="${_csrf.token}">
 						</form>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default"
@@ -233,14 +235,14 @@
 								</div>
 
 							</div>
+							<input type="hidden" id="_csrf" name="_csrf" value="${_csrf.token}">
 						</form>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default"
 								data-dismiss="modal">Cerrar</button>
 							<button type="submit" class="btn btn-primary" id="">AÃ±adir</button>
 						</div>
-						<input type="hidden" id="_csrf" name="_csrf"
-							value="${_csrf.token}">
+						
 
 					</div>
 				</div>
@@ -393,7 +395,7 @@
 			<button class="btn btn-primary" type="submit">Actualizar</button>
 =======
 
-<input type="hidden" id="_csrf" name="_csrf" value="${_csrf.token}">
+
 
 >>>>>>> seguridad
 </body>
