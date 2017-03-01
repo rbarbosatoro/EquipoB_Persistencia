@@ -39,38 +39,6 @@ public class InicioControlador {
 			reposiRol.save(new Rol((long) 2, "CANDIDATO"));
 			reposiRol.save(new Rol((long) 3, "EMPRESA"));
 			
-
-			
-			String[][] creador = {
-		            
-		            { "dani1.jpg", "dani2.jpg", "Daniel Sánchez Martín ", "Base de datos"},
-		            { "david1.jpg", "david2.jpg", "David Jurado Ortega ", "Controladores"},
-		            { "jose1.jpg", "jose2.jpg", "José Manuel Cantero Cantero ", "Vistas"},
-		            { "angel1.jpg", "angel2.jpg", "Ángel Jesús Expósito Caro ", "Controladores"},
-		            
-		            { "1.jpg", "2.jpg", "David Roman Carabantes ", "Vistas"},
-		            { "maca1.jpg", "maca2.jpg", "Macarena Casañas Suárez ", "Controladores"},
-		            { "daniel1.jpg", "daniel2.jpg", "Daniel Sáez Montes ", "Controladores"},
-		            { "alfredo1.jpg", "alfredo2.jpg", "Alfredo Fernández García ", "Base de datos"},
-		            
-		            { "juanka1.jpg", "juanka2.jpg", "Juan Carlos Medina Martínez ", "Vistas"},
-		            { "pablo1.jpg", "pablo2.jpg", "Pablo Fariña ", "Vistas"},
-		            { "alvaro1.jpg", "alvaro2.jpg", "Alvaro Jesús Zapata Jaraíz ", "Base de datos"},
-		            { "maria1.jpg", "maria2.jpg", "María Isabel Fernández Felipe", "Base de datos"},
-		            
-		            { "juancarlos1.jpg", "juancarlos2.jpg", "Juan Carlos Lumbreras Díaz", "Base de datos"},
-		            { "ruben1.jpg", "ruben2.jpg", "Rubén Barbosa Toro ", "Base de datos"},
-		            { "joel1.jpg", "joel2.jpg", "Joel Jackson Castaño ", "Controladores"},
-		            { "vero1.jpg", "vero2.jpg", "Verónica Galván Esperilla", "Vistas"},
-		            
-		            { "mana1.jpg", "mana2.jpg", "Manasés Sánchez González ", "Controladores"},
-		            { "sergio1.jpg", "sergio2.jpg", "Sergio Jesús Caro Arroyo ", "Vistas"},
-		            { "jesus1.jpg", "jesus2.jpg", "Jesús  ", "Scrum Master"},
-		            
-		            
-		        };
-			model.addAttribute(creador);
-			
 			return "index";
 	    }
 }
