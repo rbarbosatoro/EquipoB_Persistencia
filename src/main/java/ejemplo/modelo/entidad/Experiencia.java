@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
-import javax.xml.soap.Text;
 
 import org.hibernate.validator.constraints.NotEmpty;
 

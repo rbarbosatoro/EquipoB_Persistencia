@@ -64,18 +64,18 @@
 			<!-- Datos de la empresa -->
 			<div class="col-md-6 text-center">
 				<div class="col-md-6 text-center">
-					<img src="${empresa.logo}"
+					<img src="$-{empresa.logo}"
 						alt="Ha habido un error en cargar su imagen"
 						style="width: 200px; height: 150px;">
 				</div>
 				<div class="col-md-6 text-center">
-					<p id="empnomb">$-{empresa.nombre}</p>
-					<p id="empdescrip">$-{empresa.descripcion}</p>
-					<p id="empsect">$-{empresa.sector}</p>
-					<p id="empmunempl">$-{empresa.num_empleados}
+					<p id="empnomb">${empresa.nombre}</p>
+					<p id="empdescrip">${empresa.descripcion}</p>
+					<p id="empsect">${empresa.sector}</p>
+					<p id="empmunempl">${empresa.numeroEmpleado}
 					<p>
-					<p id="empmail">$-{empresa.email}</p>
-					<p id="empdirec">$-{empresa.direccion}</p>
+					<p id="empmail">${empresa.email}</p>
+					<p id="empdirec">${empresa.direccion}</p>
 					<p>
 						<button class="btn btn-warning" type="submit"
 							id="editar-datos-empresa" data-toggle="modal"
@@ -96,7 +96,7 @@
 							aria-hidden="true">&times;</button>
 						<h4 class="modal-datempres text-center">Editar datos</h4>
 					</div>
-					<form method="POST" action="<c:url value="***"/>">
+					<form method="POST" action="<c:url value="/empresa"/>">
 						<div class="modal-body">
 
 							<input type="hidden" value="EMPRESA.ID" id="iddatosempresa">
@@ -163,10 +163,10 @@
 			<h3>OFERTAS DISPONIBLES</h3>
 			<table class="table">
 				<tbody>
-					<c:forEach items="variablecontroller" var="oferta">
+					<c:forEach items="${empresa.oferta}" var="ofer">
 						<tr data-id="OFERTA_ID">
-							<td>$-{oferta.id}</td>
-							<td><a href="<c:url value="DETALLE DE OFERTA" />">$-{oferta.titulo}</a></td>
+							<td>${ofer.id}</td>
+							<td><a href="<c:url value="DETALLE DE OFERTA" />">${ofer.titulo}</a></td>
 							<td><button class="borrar-oferta btn btn-danger">Borrar</button></td>
 						</tr>
 					</c:forEach>
@@ -184,7 +184,7 @@
 						<h4 class="modal-oferta text-center">Añadir Oferta</h4>
 					</div>
 
-					<form method="POST" action="<c:url value="***"/>" role="form">
+					<form method="POST"  role="form">
 						<div class="modal-body">
 
 							<input type="hidden" id="_csrf" name="_csrf"
@@ -271,6 +271,8 @@
 								</div>
 							</div>
 						</div>
+						<input type="hidden" id="_csrf" name="_csrf"
+							value="${usuario.id }">
 						<input type="hidden" id="_csrf" name="_csrf"
 							value="${_csrf.token}">
 					</form>
