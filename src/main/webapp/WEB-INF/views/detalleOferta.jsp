@@ -186,122 +186,123 @@
 				<button class="btn btn-default" href="" role="candidato"
 					id="candidatos-inscritos-oferta">Inscribirse</button>
 			</div>
+		</div>
 
 
-			<!-- Modal del botón editar-oferta -->
+		<!-- Modal del botón editar-oferta -->
 
-			<div class="modal fade" id="editar-oferta">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal"
-								aria-hidden="true">&times;</button>
-							<h4 class="modal-oferta text-center">Editar Oferta</h4>
-						</div>
+		<div class="modal fade" id="editar-oferta">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-hidden="true">&times;</button>
+						<h4 class="modal-oferta text-center">Editar Oferta</h4>
+					</div>
 
 
-						<div class="modal-body">
-							<form method="post" action="<c:url value="***"/>" role="form">
-								<input type="hidden" id="_csrf" name="_csrf"
-									value="${_csrf.token}"> <input type="hidden"
-									value="OFERTA.ID" id="didoferta">
+					<div class="modal-body">
+						<form method="post" action="<c:url value="***"/>" role="form">
+							<input type="hidden" id="_csrf" name="_csrf"
+								value="${_csrf.token}"> <input type="hidden"
+								value="OFERTA.ID" id="didoferta">
 
-								<div class="row">
-									<div class="col-md-12 text-center form-group">
-										<input type="text" class="form-control" id="mtitulo-oferta"
-											name="titofert" placeholder="Título de oferta">
-									</div>
+							<div class="row">
+								<div class="col-md-12 text-center form-group">
+									<input type="text" class="form-control" id="mtitulo-oferta"
+										name="titofert" placeholder="Título de oferta">
 								</div>
+							</div>
 
 
-								<div class="row">
-									<div class="col-md-12 text-center form-group">
-										<input type="text" class="form-control" id="mtipo-oferta"
-											name="tipofert" placeholder="Tipo de oferta">
-									</div>
+							<div class="row">
+								<div class="col-md-12 text-center form-group">
+									<input type="text" class="form-control" id="mtipo-oferta"
+										name="tipofert" placeholder="Tipo de oferta">
 								</div>
+							</div>
 
-								<div class="row">
-									<div class="col-md-12 text-center form-group">
-										<textarea rows="4" cols="50" id="mdescripcion-oferta"
-											name="descripofert" class="form-control"
-											style="text-align: center" placeholder="Descripción-oferta">esto es la descripción de la oferta</textarea>
-									</div>
+							<div class="row">
+								<div class="col-md-12 text-center form-group">
+									<textarea rows="4" cols="50" id="mdescripcion-oferta"
+										name="descripofert" class="form-control"
+										style="text-align: center" placeholder="Descripción-oferta">esto es la descripción de la oferta</textarea>
 								</div>
+							</div>
 
-								<div class="row">
-									<div class="col-md-12 text-center form-group">
-										<input type="text" class="form-control" id="mlocalidad"
-											name="localidadoferta" placeholder="Localidad">
-									</div>
+							<div class="row">
+								<div class="col-md-12 text-center form-group">
+									<input type="text" class="form-control" id="mlocalidad"
+										name="localidadoferta" placeholder="Localidad">
 								</div>
+							</div>
 
 
-								<div class="row">
-									<div class="col-md-12 text-center form-group">
-										<input type="datetime-local" class="form-control"
-											name="bdaytime" id="mfecha-oferta" placeholder="Fecha-oferta">
-									</div>
+							<div class="row">
+								<div class="col-md-12 text-center form-group">
+									<input type="datetime-local" class="form-control"
+										name="bdaytime" id="mfecha-oferta" placeholder="Fecha-oferta">
 								</div>
+							</div>
 
-								<div class="row">
-									<div class="col-md-12 text-center form-group">
-										<input type="text" name="requisitosofert" class="form-control"
-											id="mrequisitos-candidato"
-											placeholder="requisitos del candidato">
-									</div>
+							<div class="row">
+								<div class="col-md-12 text-center form-group">
+									<input type="text" name="requisitosofert" class="form-control"
+										id="mrequisitos-candidato"
+										placeholder="requisitos del candidato">
 								</div>
+							</div>
 
-								<div class="row">
-									<div class="col-md-12 text-center form-group">
-										<input type="text" name="sectorlabofert" class="form-control"
-											id="msector-laboral-oferta" placeholder="Sector Laboral">
-									</div>
+							<div class="row">
+								<div class="col-md-12 text-center form-group">
+									<input type="text" name="sectorlabofert" class="form-control"
+										id="msector-laboral-oferta" placeholder="Sector Laboral">
 								</div>
+							</div>
 
-								<div class="row">
-									<div class="col-md-12 text-center form-group">
-										<input type="text" name="categofert" class="form-control"
-											id="mcategoria-oferta" placeholder="Categoría oferta">
-									</div>
+							<div class="row">
+								<div class="col-md-12 text-center form-group">
+									<input type="text" name="categofert" class="form-control"
+										id="mcategoria-oferta" placeholder="Categoría oferta">
 								</div>
+							</div>
 
-								<div class="row">
-									<div class="col-md-12 text-center form-group">
-										<input type="text" name="numvacantes" class="form-control"
-											id="mnumero-vacantes" placeholder="Numero de vacantes">
-									</div>
+							<div class="row">
+								<div class="col-md-12 text-center form-group">
+									<input type="text" name="numvacantes" class="form-control"
+										id="mnumero-vacantes" placeholder="Numero de vacantes">
 								</div>
+							</div>
 
 
-								<div class="row">
-									<div class="col-md-12 text-center form-group">
-										<input type="text" name="salariomin" class="form-control"
-											id="msalario-minimo" placeholder="Salario mínimo">
-									</div>
+							<div class="row">
+								<div class="col-md-12 text-center form-group">
+									<input type="text" name="salariomin" class="form-control"
+										id="msalario-minimo" placeholder="Salario mínimo">
 								</div>
+							</div>
 
-								<div class="row">
-									<div class="col-md-12 text-center form-group">
-										<input type="text" name="salariomax" class="form-control"
-											id="msalario-maximo" placeholder="Salario máximo">
-									</div>
+							<div class="row">
+								<div class="col-md-12 text-center form-group">
+									<input type="text" name="salariomax" class="form-control"
+										id="msalario-maximo" placeholder="Salario máximo">
 								</div>
-							</form>
-						</div>
-
-
-
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal">Cerrar</button>
-							<button id="guardar-cambios-oferta" class="btn btn-primary">Guardar</button>
-						</div>
+							</div>
+						</form>
 					</div>
 
 
 
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+						<button id="guardar-cambios-oferta" class="btn btn-primary">Guardar</button>
+					</div>
 				</div>
+
+
+
 			</div>
+		</div>
+	</div>
 </body>
 </html>
