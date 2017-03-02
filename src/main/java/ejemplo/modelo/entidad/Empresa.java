@@ -17,6 +17,11 @@ public class Empresa extends Usuario {
 
 
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@NotNull
 	@NotEmpty
 	private String nombre;

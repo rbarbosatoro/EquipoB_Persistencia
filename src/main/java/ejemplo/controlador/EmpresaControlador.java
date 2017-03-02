@@ -36,7 +36,7 @@ public class EmpresaControlador {
 	@RequestMapping(method = RequestMethod.GET)
 	public String listaEmpresa(Model model) {
 		model.addAttribute("empresas", repoEmp.findAll());
-		return "***";
+		return "views/perfilEmpresa";
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/detalle/{id}")
@@ -56,7 +56,7 @@ public class EmpresaControlador {
 	public String guardarEmpresa(Model model, @Valid @ModelAttribute Empresa empresa, BindingResult bindingResult) {
 		repoEmp.save(empresa);
 		model.addAttribute("empresa", repoEmp.findAll());
-		return "/index";
+		return "views/perfilEmpresa";
 	}
 
 	@RequestMapping(value = "/oferta", method = RequestMethod.POST)
