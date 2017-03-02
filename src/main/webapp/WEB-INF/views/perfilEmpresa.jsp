@@ -5,7 +5,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
-<!DOCTYPE html >
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -14,10 +14,10 @@
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<script type="text/javascript"
+	
+	<script type="text/javascript"
 	src="<c:url value="/static/js/miscript.js" />"></script>
-
+	
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -49,6 +49,7 @@
 </head>
 <body
 	style="background-image: url('https://k39.kn3.net/taringa/6/5/2/1/3/1/4/b2kcarolina/503.jpg?8605'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+
 	<div class="container">
 		<div class="row text-center" style="margin-top: 50px">
 			<div class="col-md-6">
@@ -62,6 +63,7 @@
 
 			</div>
 			<!-- Datos de la empresa -->
+
 			<div class="col-md-6 text-center">
 				<div class="col-md-6 text-center">
 					<img src="$-{empresa.logo}"
@@ -69,16 +71,14 @@
 						style="width: 200px; height: 150px;">
 				</div>
 				<div class="col-md-6 text-center">
-					<p id="empnomb">${empresa.nombre}</p>
-					<p id="empdescrip">${empresa.descripcion}</p>
-					<p id="empsect">${empresa.sector}</p>
-					<p id="empmunempl">${empresa.numeroEmpleado}
+					<p id="empnomb">$-{empresa.nombre}</p>
+					<p id="empdescrip">$-{empresa.descripcion}</p>
+					<p id="empsect">$-{empresa.sector}</p>
+					<p id="empmunempl">$-{empresa.num_empleados}<p>
+					<p id="empmail">$-{empresa.email}</p>
+					<p id="empdirec">$-{empresa.direccion}</p>
 					<p>
-					<p id="empmail">${empresa.email}</p>
-					<p id="empdirec">${empresa.direccion}</p>
-					<p>
-						<button class="btn btn-warning" type="submit"
-							id="editar-datos-empresa" data-toggle="modal"
+						<button class="btn btn-warning" type="submit" id="editar-datos-empresa" data-toggle="modal"
 							data-target="#editardatosempresa">Editar</button>
 					</p>
 
@@ -98,8 +98,8 @@
 					</div>
 					<form method="POST" action="<c:url value="/empresa"/>">
 						<div class="modal-body">
-
-							<input type="hidden" value="EMPRESA.ID" id="iddatosempresa">
+					
+						<input type="hidden" value="EMPRESA.ID" id="iddatosempresa">
 
 							<div class="row">
 								<div class="col-md-12 text-center form-group">
@@ -107,22 +107,21 @@
 										name="nombre" placeholder="Nombre empresa">
 								</div>
 							</div>
-
+							
 							<div class="row">
 								<div class="col-md-12 text-center form-group">
-									<input type="text" class="form-control"
-										id="descripcion-empresa" name="descripcion"
-										placeholder="Descripción empresa">
+									<input type="text" class="form-control" id="descripcion-empresa"
+										name="descripcion" placeholder="Descripción empresa">
 								</div>
 							</div>
-
+							
 							<div class="row">
 								<div class="col-md-12 text-center form-group">
 									<input type="text" class="form-control" id="sector-empresa"
 										name="sector" placeholder="Sector empresa">
 								</div>
 							</div>
-
+							
 							<div class="row">
 								<div class="col-md-12 text-center form-group">
 									<input type="text" class="form-control" id="numero-empleados"
@@ -145,19 +144,17 @@
 							</div>
 
 						</div>
-						<input type="hidden" id="_csrf" name="_csrf"
-							value="${_csrf.token}">
 					</form>
 
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-						<button id="guardar-cambios" class="btn btn-primary">Guardar</button>
+						<button  id= "guardar-cambios" class="btn btn-primary">Guardar</button>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Listado de ofertas -->
+						<!-- Listado de ofertas -->
 
 		<div class="row" style="margin-top: 150px">
 			<h3>OFERTAS DISPONIBLES</h3>
@@ -172,9 +169,12 @@
 					</c:forEach>
 				</tbody>
 			</table>
+
 		</div>
 
 		<!-- modal registro de oferta de empresa -->
+
+
 		<div class="modal fade" id="annadiroferta">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -186,10 +186,11 @@
 
 					<form method="POST"  role="form">
 						<div class="modal-body">
-
+						
 							<input type="hidden" id="_csrf" name="_csrf"
-								value="${_csrf.token}"> <input type="hidden"
-								value="OFERTA.ID" id="idoferta">
+								value="${_csrf.token}">
+								
+								<input type="hidden" value="OFERTA.ID" id="idoferta">
 
 							<div class="row">
 								<div class="col-md-12 text-center form-group">
@@ -230,8 +231,7 @@
 							<div class="row">
 								<div class="col-md-12 text-center form-group">
 									<input type="text" name="requisitosofert" class="form-control"
-										id="requisitos-candidato"
-										placeholder="requisitos del candidato">
+										id="requisitos-candidato" placeholder="requisitos del candidato">
 								</div>
 							</div>
 
@@ -277,6 +277,7 @@
 							value="${_csrf.token}">
 					</form>
 
+					
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 						<button type="submit" class="btn btn-primary">Guardar</button>
@@ -288,7 +289,5 @@
 			</div>
 		</div>
 	</div>
-
-
 </body>
 </html>

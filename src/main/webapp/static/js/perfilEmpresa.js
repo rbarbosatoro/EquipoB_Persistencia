@@ -26,12 +26,12 @@ $(document).ready(function() {
 		$("#guardar-cambios").on('click', function() {
 			
 			var id = $('#iddatosempresa').val(id);
-			var nombre = $('#empnomb').text();
-			var descripcion = $('#empdescrip').text();
-			var sector = $('#empsect').text();
-			var numempleados = $('#empmunempl').text();
-			var email =	$('#empmail').text();
-			var direccion = $('#empdirec').text();
+			var nombre = $('#empnomb').val();
+			var descripcion = $('#empdescrip').val();
+			var sector = $('#empsect').val();
+			var numempleados = $('#empmunempl').val();
+			var email =	$('#empmail').val();
+			var direccion = $('#empdirec').val();
 			
 			var datos = {idBBDD: id, nombreBBDD: nombre, descripcionBBDD: descripcion, sectorBBDD: sector, numempleadosBBDD: numempleados, emailBBDD: email, direccionBBDD: direccion };
 			
